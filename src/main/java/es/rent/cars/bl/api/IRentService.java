@@ -8,7 +8,7 @@ import es.rent.cars.entity.Rent;
  */
 public interface IRentService {
 
-	public Rent findRentByCarAndCustomerIds(Integer idCar, Integer idCustomer);
+	public Rent findRentByCarAndCustomer(Integer idCar, Integer idCustomer);
 	
 	public void saveRent(Rent rent);
 }

@@ -15,4 +15,5 @@ import es.rent.cars.entity.Rent;
 @Repository
 public interface IRentRepository extends JpaRepository<Rent, Integer> {
 
+	public Rent findRentByCarAndCustomerIds(Integer idCar, Integer idCustomer);
 }

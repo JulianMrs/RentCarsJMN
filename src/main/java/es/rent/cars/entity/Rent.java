@@ -11,6 +11,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
 import lombok.Data;
@@ -22,6 +23,7 @@ import lombok.Data;
 @Entity
 @Data
 @Table(name="rent")
+@NamedQuery(name = "Rent.findRentByCarAndCustomerIds", query = "SELECT r FROM Rent r WHERE r.car.id = :idCar AND r.customer.id = :idCustomer")
 public class Rent {
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
