@@ -87,7 +87,7 @@ public class RentsControllerImpl implements IRentsController {
 			return new ResponseEntity<>(salidaReturnCar, HttpStatus.BAD_REQUEST);
 		}
 		
-		Rent rent = rentService.findRentByCarAndCustomerIds(car.get().getId(),customer.get().getId());
+		Rent rent = rentService.findRentByCarAndCustomer(car.get().getId(),customer.get().getId());
 		if(rent == null) {
 			return new ResponseEntity<>(salidaReturnCar, HttpStatus.BAD_REQUEST);
 		}
